@@ -1,0 +1,2468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="10">
+<comment>
+Notes: 
+optimizable variables order:
+palm_pos.trans_X         min: -2000  max: 2000  def: -200  var: 0
+palm_pos.trans_Y         min: -2000  max: 2000  def: 0  var: 0
+palm_pos.trans_Z         min: -2000  max: 2000  def: -900  var: 0
+palm_pos.qX         min: -1  max: 1  def: 0  var: 0
+palm_pos.qY         min: -1  max: 1  def: 0  var: 0
+palm_pos.qZ         min: -1  max: 1  def: 1  var: 0
+palm_pos.qW         min: -1  max: 1  def: 0  var: 0
+pinky_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+pinky_pos.Yaw         min: 0.7  max: 2.2  def: 1.57  var: 0
+pinky2_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+pinky3Pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+thumb_pos.Pitch         min: 0  max: 1  def: 0  var: 0
+thumb_pos.Yaw         min: 2.5  max: 3.14  def: 3.14  var: 0
+thumb2_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+thumb3_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+ring_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+ring_pos.Yaw         min: 0.7  max: 2.2  def: 1.57  var: 0
+ring2_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+ring3_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+index_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+index_pos.Yaw         min: 0.7  max: 2.2  def: 1.57  var: 0
+index2_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+index3_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+middle_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+middle_pos.Yaw         min: 0.7  max: 2.2  def: 1.57  var: 0
+mid2_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+mid3_pos.Pitch         min: 0  max: 1.57  def: 0  var: 0
+Total count: 27
+
+tree arrangement of the optimizable variables:
+
+-palm_pos       |||     OPT
+| -scale
+  | -palm_sph1_p
+  | -palm_sph2_p
+  | -palm_mesh_pos
+  | -pinky_pos       |||     OPT
+  | | -pinky_sph_p
+  | | -pinky_cyl_pos
+  | | -pinky2_pos       |||     OPT
+  |   | -pinky3Pos       |||     OPT
+  |   | | -pinky3_sph_p
+  |   | | -pinky4_sph_p
+  |   | | -pinky3_cyl_pos
+  |   | -pinky2_sph_p
+  |   | -pinky2_cyl_pos
+  | -thumb_pos       |||     OPT
+  | | -thumb_sph_p
+  | | -thumb_cyl_p
+  | | -thumb2_pos       |||     OPT
+  |   | -thumb2_sph_p
+  |   | -thumb2_cyl_p
+  |   | -thumb3_pos       |||     OPT
+  |     | -thumb4_sph_p
+  |     | -thumb3_cyl_p
+  |     | -thumb3_sph
+  | -ring_pos       |||     OPT
+  | | -ring_sph_p
+  | | -ring_cyl_p
+  | | -ring2_pos       |||     OPT
+  |   | -ring2_sph_p
+  |   | -ring2_cyl_p
+  |   | -ring3_pos       |||     OPT
+  |     | -ring3_sph_p
+  |     | -ring4_sph_p
+  |     | -ring3_cyl_p
+  | -index_pos       |||     OPT
+  | | -index_sph_p
+  | | -index_cyl_p
+  | | -index2_pos       |||     OPT
+  |   | -index2_sph_p
+  |   | -index2_cyl_p
+  |   | -index3_pos       |||     OPT
+  |     | -index3_sph_p
+  |     | -index3_cyl_p
+  |     | -index4_sph_p
+  | -middle_pos       |||     OPT
+    | -mid_sph_p
+    | -mid_cyl_p
+    | -mid2_pos       |||     OPT
+      | -mid2_sph_p
+      | -mid2_cyl_p
+      | -mid3_pos       |||     OPT
+        | -mid3_sph_p
+        | -mid3_cyl_p
+        | -mid4_sph_p
+</comment>
+<meshesDirectoryPath></meshesDirectoryPath>
+<nbSegments>55</nbSegments>
+<segment class_id="0" tracking_level="0" version="3">
+	<name>palm_pos</name>
+	<hook_name>ground</hook_name>
+	<link_type>TranslationQuaternion</link_type>
+	<trans_X>-200</trans_X>
+	<trans_X>-2000</trans_X>
+	<trans_X>2000</trans_X>
+	<trans_X>1</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>-2000</trans_Y>
+	<trans_Y>2000</trans_Y>
+	<trans_Y>1</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>-900</trans_Z>
+	<trans_Z>-2000</trans_Z>
+	<trans_Z>2000</trans_Z>
+	<trans_Z>1</trans_Z>
+	<trans_Z>0</trans_Z>
+	<qX>0</qX>
+	<qX>-1</qX>
+	<qX>1</qX>
+	<qX>1</qX>
+	<qX>0</qX>
+	<qY>0</qY>
+	<qY>-1</qY>
+	<qY>1</qY>
+	<qY>1</qY>
+	<qY>0</qY>
+	<qZ>1</qZ>
+	<qZ>-1</qZ>
+	<qZ>1</qZ>
+	<qZ>1</qZ>
+	<qZ>0</qZ>
+	<qW>0</qW>
+	<qW>-1</qW>
+	<qW>1</qW>
+	<qW>1</qW>
+	<qW>0</qW>
+</segment>
+<segment>
+	<name>scale</name>
+	<hook_name>palm_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>0.89999998</scale>
+	<scale>0.5</scale>
+	<scale>1</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>palm_sph1_p</name>
+	<hook_name>scale</hook_name>
+	<link_type>Trans_scale</link_type>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>30</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>30</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scaleX>50</scaleX>
+	<scaleX>0</scaleX>
+	<scaleX>50</scaleX>
+	<scaleX>0</scaleX>
+	<scaleX>0</scaleX>
+	<scaleY>20</scaleY>
+	<scaleY>0</scaleY>
+	<scaleY>20</scaleY>
+	<scaleY>0</scaleY>
+	<scaleY>0</scaleY>
+	<scaleZ>10</scaleZ>
+	<scaleZ>0</scaleZ>
+	<scaleZ>10</scaleZ>
+	<scaleZ>0</scaleZ>
+	<scaleZ>0</scaleZ>
+</segment>
+<segment>
+	<name>palm_sph2_p</name>
+	<hook_name>scale</hook_name>
+	<link_type>Trans_scale</link_type>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>-30</trans_Y>
+	<trans_Y>-30</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scaleX>50</scaleX>
+	<scaleX>0</scaleX>
+	<scaleX>50</scaleX>
+	<scaleX>0</scaleX>
+	<scaleX>0</scaleX>
+	<scaleY>20</scaleY>
+	<scaleY>0</scaleY>
+	<scaleY>20</scaleY>
+	<scaleY>0</scaleY>
+	<scaleY>0</scaleY>
+	<scaleZ>10</scaleZ>
+	<scaleZ>0</scaleZ>
+	<scaleZ>10</scaleZ>
+	<scaleZ>0</scaleZ>
+	<scaleZ>0</scaleZ>
+</segment>
+<segment>
+	<name>palm_mesh_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>Trans_RPYRot_Scaling</link_type>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>1.5700001</Roll>
+	<Roll>1.5700001</Roll>
+	<Roll>1.5700001</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<scale_X>10</scale_X>
+	<scale_X>10</scale_X>
+	<scale_X>10</scale_X>
+	<scale_X>0</scale_X>
+	<scale_X>0</scale_X>
+	<scale_Y>50</scale_Y>
+	<scale_Y>50</scale_Y>
+	<scale_Y>50</scale_Y>
+	<scale_Y>0</scale_Y>
+	<scale_Y>0</scale_Y>
+	<scale_Z>30</scale_Z>
+	<scale_Z>30</scale_Z>
+	<scale_Z>40</scale_Z>
+	<scale_Z>0</scale_Z>
+	<scale_Z>0</scale_Z>
+</segment>
+<segment>
+	<name>pinky_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>40.987499</trans_X>
+	<trans_X>40.987499</trans_X>
+	<trans_X>40.987499</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>1.5700001</Yaw>
+	<Yaw>0.69999999</Yaw>
+	<Yaw>2.2</Yaw>
+	<Yaw>1</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>pinky_sph_p</name>
+	<hook_name>pinky_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>pinky_cyl_pos</name>
+	<hook_name>pinky_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>pinky2_pos</name>
+	<hook_name>pinky_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>pinky3Pos</name>
+	<hook_name>pinky2_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>16</trans_X>
+	<trans_X>16</trans_X>
+	<trans_X>16</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>pinky3_sph_p</name>
+	<hook_name>pinky3Pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>pinky4_sph_p</name>
+	<hook_name>pinky3Pos</hook_name>
+	<link_type>Trans_scaleU</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>pinky3_cyl_pos</name>
+	<hook_name>pinky3Pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>pinky2_sph_p</name>
+	<hook_name>pinky2_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>pinky2_cyl_pos</name>
+	<hook_name>pinky2_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>8</trans_X>
+	<trans_X>8</trans_X>
+	<trans_X>8</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>16</skew_height>
+	<skew_height>8</skew_height>
+	<skew_height>16</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>thumb_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>-45</trans_Y>
+	<trans_Y>-45</trans_Y>
+	<trans_Y>-45</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>-0.5</Roll>
+	<Roll>0</Roll>
+	<Roll>0.5</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>3.1400001</Yaw>
+	<Yaw>2.5</Yaw>
+	<Yaw>3.1400001</Yaw>
+	<Yaw>1</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>thumb_sph_p</name>
+	<hook_name>thumb_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>thumb_cyl_p</name>
+	<hook_name>thumb_pos</hook_name>
+	<link_type>Trans_RPYRot_Scaling</link_type>
+	<trans_X>30</trans_X>
+	<trans_X>30</trans_X>
+	<trans_X>30</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<scale_X>20</scale_X>
+	<scale_X>20</scale_X>
+	<scale_X>30</scale_X>
+	<scale_X>0</scale_X>
+	<scale_X>0</scale_X>
+	<scale_Y>20</scale_Y>
+	<scale_Y>5</scale_Y>
+	<scale_Y>20</scale_Y>
+	<scale_Y>0</scale_Y>
+	<scale_Y>0</scale_Y>
+	<scale_Z>40</scale_Z>
+	<scale_Z>5</scale_Z>
+	<scale_Z>40</scale_Z>
+	<scale_Z>0</scale_Z>
+	<scale_Z>0</scale_Z>
+</segment>
+<segment>
+	<name>thumb2_pos</name>
+	<hook_name>thumb_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>60</trans_X>
+	<trans_X>60</trans_X>
+	<trans_X>60</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>thumb2_sph_p</name>
+	<hook_name>thumb2_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>7</scale>
+	<scale>5</scale>
+	<scale>7</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>thumb2_cyl_p</name>
+	<hook_name>thumb2_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>40</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>40</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>7</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>7</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>7</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>7</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>thumb3_pos</name>
+	<hook_name>thumb2_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>40</trans_X>
+	<trans_X>40</trans_X>
+	<trans_X>40</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>thumb4_sph_p</name>
+	<hook_name>thumb3_pos</hook_name>
+	<link_type>Trans_scaleU</link_type>
+	<trans_X>25</trans_X>
+	<trans_X>25</trans_X>
+	<trans_X>25</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scale>7</scale>
+	<scale>0</scale>
+	<scale>7</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>thumb3_cyl_p</name>
+	<hook_name>thumb3_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>12.5</trans_X>
+	<trans_X>12.5</trans_X>
+	<trans_X>12.5</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>25</skew_height>
+	<skew_height>12.5</skew_height>
+	<skew_height>25</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>7</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>7</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>7</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>7</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>thumb3_sph</name>
+	<hook_name>thumb3_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>7</scale>
+	<scale>5</scale>
+	<scale>7</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>ring_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>11.4653</trans_X>
+	<trans_X>11.4653</trans_X>
+	<trans_X>11.4653</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>1.5700001</Yaw>
+	<Yaw>0.69999999</Yaw>
+	<Yaw>2.2</Yaw>
+	<Yaw>1</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>ring_sph_p</name>
+	<hook_name>ring_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>ring_cyl_p</name>
+	<hook_name>ring_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>40</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>40</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>ring2_pos</name>
+	<hook_name>ring_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>40</trans_X>
+	<trans_X>40</trans_X>
+	<trans_X>40</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>ring2_sph_p</name>
+	<hook_name>ring2_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>ring2_cyl_p</name>
+	<hook_name>ring2_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>ring3_pos</name>
+	<hook_name>ring2_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>ring3_sph_p</name>
+	<hook_name>ring3_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>ring4_sph_p</name>
+	<hook_name>ring3_pos</hook_name>
+	<link_type>Trans_scaleU</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>ring3_cyl_p</name>
+	<hook_name>ring3_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>index_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>-40.4869</trans_X>
+	<trans_X>-40.4869</trans_X>
+	<trans_X>-40.4869</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>1.5700001</Yaw>
+	<Yaw>0.69999999</Yaw>
+	<Yaw>2.2</Yaw>
+	<Yaw>1</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>index_sph_p</name>
+	<hook_name>index_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>index_cyl_p</name>
+	<hook_name>index_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>17.5</trans_X>
+	<trans_X>17.5</trans_X>
+	<trans_X>17.5</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>35</skew_height>
+	<skew_height>17.5</skew_height>
+	<skew_height>35</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>index2_pos</name>
+	<hook_name>index_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>35</trans_X>
+	<trans_X>35</trans_X>
+	<trans_X>35</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>index2_sph_p</name>
+	<hook_name>index2_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>index2_cyl_p</name>
+	<hook_name>index2_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>index3_pos</name>
+	<hook_name>index2_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>index3_sph_p</name>
+	<hook_name>index3_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>index3_cyl_p</name>
+	<hook_name>index3_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>10</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>20</skew_height>
+	<skew_height>10</skew_height>
+	<skew_height>20</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>index4_sph_p</name>
+	<hook_name>index3_pos</hook_name>
+	<link_type>Trans_scaleU</link_type>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>20</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>middle_pos</name>
+	<hook_name>scale</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>-12.9642</trans_X>
+	<trans_X>-12.9642</trans_X>
+	<trans_X>-12.9642</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>40</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>1.5700001</Yaw>
+	<Yaw>0.69999999</Yaw>
+	<Yaw>2.2</Yaw>
+	<Yaw>1</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>mid_sph_p</name>
+	<hook_name>middle_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>mid_cyl_p</name>
+	<hook_name>middle_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>22.5</trans_X>
+	<trans_X>22.5</trans_X>
+	<trans_X>22.5</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>45</skew_height>
+	<skew_height>22.5</skew_height>
+	<skew_height>45</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>mid2_pos</name>
+	<hook_name>middle_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>45</trans_X>
+	<trans_X>45</trans_X>
+	<trans_X>45</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>mid2_sph_p</name>
+	<hook_name>mid2_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>mid2_cyl_p</name>
+	<hook_name>mid2_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>12.5</trans_X>
+	<trans_X>12.5</trans_X>
+	<trans_X>12.5</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>25</skew_height>
+	<skew_height>12.5</skew_height>
+	<skew_height>25</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>mid3_pos</name>
+	<hook_name>mid2_pos</hook_name>
+	<link_type>TranslationRPYRotation</link_type>
+	<trans_X>25</trans_X>
+	<trans_X>25</trans_X>
+	<trans_X>25</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>1</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+</segment>
+<segment>
+	<name>mid3_sph_p</name>
+	<hook_name>mid3_pos</hook_name>
+	<link_type>scaling_uniform</link_type>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<segment>
+	<name>mid3_cyl_p</name>
+	<hook_name>mid3_pos</hook_name>
+	<link_type>Trans_RPYRot_Skew</link_type>
+	<trans_X>10.5</trans_X>
+	<trans_X>10.5</trans_X>
+	<trans_X>10.5</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Roll>0</Roll>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>1.5700001</Pitch>
+	<Pitch>0</Pitch>
+	<Pitch>0</Pitch>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<Yaw>0</Yaw>
+	<skew_height>21</skew_height>
+	<skew_height>10.5</skew_height>
+	<skew_height>21</skew_height>
+	<skew_height>0</skew_height>
+	<skew_height>0</skew_height>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>5</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_baseRadius>0</skew_baseRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>5</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_topRadius>0</skew_topRadius>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>2</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initHeight>0</skew_initHeight>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>1</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+	<skew_initRadius>0</skew_initRadius>
+</segment>
+<segment>
+	<name>mid4_sph_p</name>
+	<hook_name>mid3_pos</hook_name>
+	<link_type>Trans_scaleU</link_type>
+	<trans_X>21</trans_X>
+	<trans_X>21</trans_X>
+	<trans_X>21</trans_X>
+	<trans_X>0</trans_X>
+	<trans_X>0</trans_X>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Y>0</trans_Y>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<trans_Z>0</trans_Z>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>5</scale>
+	<scale>0</scale>
+	<scale>0</scale>
+</segment>
+<nbMeshes>37</nbMeshes>
+<mesh class_id="1" tracking_level="0" version="0">
+	<mesh_name>palm_sph1</mesh_name>
+	<hook_segment_name>palm_sph1_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>green</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>palm_sph2</mesh_name>
+	<hook_segment_name>palm_sph2_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>green</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky_sphere</mesh_name>
+	<hook_segment_name>pinky_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky2_sphere</mesh_name>
+	<hook_segment_name>pinky2_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky3_sphere</mesh_name>
+	<hook_segment_name>pinky3_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky4_sph</mesh_name>
+	<hook_segment_name>pinky4_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring_sphere</mesh_name>
+	<hook_segment_name>ring_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring2_sphere</mesh_name>
+	<hook_segment_name>ring2_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring3_sphere</mesh_name>
+	<hook_segment_name>ring3_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring4_sphere</mesh_name>
+	<hook_segment_name>ring4_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid_sphere</mesh_name>
+	<hook_segment_name>mid_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid2_sphere</mesh_name>
+	<hook_segment_name>mid2_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid3_sphere</mesh_name>
+	<hook_segment_name>mid3_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid4_sphere</mesh_name>
+	<hook_segment_name>mid4_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index_sphere</mesh_name>
+	<hook_segment_name>index_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index2_sphere</mesh_name>
+	<hook_segment_name>index2_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index3_sphere</mesh_name>
+	<hook_segment_name>index3_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index4_sphere</mesh_name>
+	<hook_segment_name>index4_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb_cyl</mesh_name>
+	<hook_segment_name>thumb_cyl_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>red</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb2_sphere</mesh_name>
+	<hook_segment_name>thumb2_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb3_sph</mesh_name>
+	<hook_segment_name>thumb3_sph</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb4_sphere</mesh_name>
+	<hook_segment_name>thumb4_sph_p</hook_segment_name>
+	<mesh_file_path>sphere_low.obj</mesh_file_path>
+	<mesh_color>blue</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>palm1</mesh_name>
+	<hook_segment_name>palm_mesh_pos</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>purple</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky_cyl</mesh_name>
+	<hook_segment_name>pinky_cyl_pos</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky2_cyl</mesh_name>
+	<hook_segment_name>pinky2_cyl_pos</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>pinky3_cyl</mesh_name>
+	<hook_segment_name>pinky3_cyl_pos</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring_cyl</mesh_name>
+	<hook_segment_name>ring_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring2_cyl</mesh_name>
+	<hook_segment_name>ring2_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>ring3_cyl</mesh_name>
+	<hook_segment_name>ring3_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid_cyl</mesh_name>
+	<hook_segment_name>mid_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid2_cyl</mesh_name>
+	<hook_segment_name>mid2_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>mid3_cyl</mesh_name>
+	<hook_segment_name>mid3_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index_cyl</mesh_name>
+	<hook_segment_name>index_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index2_cyl</mesh_name>
+	<hook_segment_name>index2_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>index3_cyl</mesh_name>
+	<hook_segment_name>index3_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb2_cyl</mesh_name>
+	<hook_segment_name>thumb2_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<mesh>
+	<mesh_name>thumb3_cyl</mesh_name>
+	<hook_segment_name>thumb3_cyl_p</hook_segment_name>
+	<mesh_file_path>cylinder_low.obj</mesh_file_path>
+	<mesh_color>white</mesh_color>
+</mesh>
+<nbMetaVars>6</nbMetaVars>
+<metaVar class_id="2" tracking_level="0" version="3">
+	<name>close_hand</name>
+	<operationType>add</operationType>
+	<value>-0.80000001</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>0</active>
+	<variance>0</variance>
+	<nb_slaves>12</nb_slaves>
+	<seg>pinky_pos</seg>
+	<param>Pitch</param>
+	<seg>ring_pos</seg>
+	<param>Pitch</param>
+	<seg>index_pos</seg>
+	<param>Pitch</param>
+	<seg>middle_pos</seg>
+	<param>Pitch</param>
+	<seg>pinky2_pos</seg>
+	<param>Pitch</param>
+	<seg>pinky3Pos</seg>
+	<param>Pitch</param>
+	<seg>ring2_pos</seg>
+	<param>Pitch</param>
+	<seg>ring3_pos</seg>
+	<param>Pitch</param>
+	<seg>mid2_pos</seg>
+	<param>Pitch</param>
+	<seg>mid3_pos</seg>
+	<param>Pitch</param>
+	<seg>index2_pos</seg>
+	<param>Pitch</param>
+	<seg>index3_pos</seg>
+	<param>Pitch</param>
+</metaVar>
+<metaVar>
+	<name>fingers_tips_radius</name>
+	<operationType>multiply</operationType>
+	<value>0.80000001</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>1</active>
+	<variance>0</variance>
+	<nb_slaves>10</nb_slaves>
+	<seg>pinky3_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>ring3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>mid3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>thumb3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>pinky4_sph_p</seg>
+	<param>scale</param>
+	<seg>thumb4_sph_p</seg>
+	<param>scale</param>
+	<seg>ring4_sph_p</seg>
+	<param>scale</param>
+	<seg>index4_sph_p</seg>
+	<param>scale</param>
+	<seg>mid4_sph_p</seg>
+	<param>scale</param>
+</metaVar>
+<metaVar>
+	<name>finger_midHighRadius</name>
+	<operationType>multiply</operationType>
+	<value>0.89999998</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>1</active>
+	<variance>0</variance>
+	<nb_slaves>15</nb_slaves>
+	<seg>thumb3_sph</seg>
+	<param>scale</param>
+	<seg>pinky2_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>thumb2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>mid2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>ring2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>pinky3_sph_p</seg>
+	<param>scale</param>
+	<seg>index3_sph_p</seg>
+	<param>scale</param>
+	<seg>mid3_sph_p</seg>
+	<param>scale</param>
+	<seg>ring3_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky3_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>thumb3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>index3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+</metaVar>
+<metaVar>
+	<name>finger_midLowRadius</name>
+	<operationType>multiply</operationType>
+	<value>0.94999999</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>1</active>
+	<variance>0</variance>
+	<nb_slaves>14</nb_slaves>
+	<seg>pinky2_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>thumb2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>index2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid2_sph_p</seg>
+	<param>scale</param>
+	<seg>index2_sph_p</seg>
+	<param>scale</param>
+	<seg>ring2_sph_p</seg>
+	<param>scale</param>
+	<seg>thumb2_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky2_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>ring_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>mid_cyl_p</seg>
+	<param>skew_topRadius</param>
+</metaVar>
+<metaVar>
+	<name>finger_bottomRadius</name>
+	<operationType>multiply</operationType>
+	<value>1</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>1</active>
+	<variance>0</variance>
+	<nb_slaves>8</nb_slaves>
+	<seg>mid_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>pinky_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>index_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>pinky_sph_p</seg>
+	<param>scale</param>
+	<seg>ring_sph_p</seg>
+	<param>scale</param>
+	<seg>index_sph_p</seg>
+	<param>scale</param>
+	<seg>mid_sph_p</seg>
+	<param>scale</param>
+</metaVar>
+<metaVar>
+	<name>fingers_thickness</name>
+	<operationType>multiply</operationType>
+	<value>2</value>
+	<min>0</min>
+	<max>0</max>
+	<optimize>0</optimize>
+	<active>1</active>
+	<variance>0</variance>
+	<nb_slaves>51</nb_slaves>
+	<seg>pinky_sph_p</seg>
+	<param>scale</param>
+	<seg>thumb_sph_p</seg>
+	<param>scale</param>
+	<seg>ring_sph_p</seg>
+	<param>scale</param>
+	<seg>index_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky2_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky3_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky4_sph_p</seg>
+	<param>scale</param>
+	<seg>thumb2_sph_p</seg>
+	<param>scale</param>
+	<seg>thumb3_sph</seg>
+	<param>scale</param>
+	<seg>thumb4_sph_p</seg>
+	<param>scale</param>
+	<seg>index2_sph_p</seg>
+	<param>scale</param>
+	<seg>index3_sph_p</seg>
+	<param>scale</param>
+	<seg>index4_sph_p</seg>
+	<param>scale</param>
+	<seg>mid_sph_p</seg>
+	<param>scale</param>
+	<seg>mid2_sph_p</seg>
+	<param>scale</param>
+	<seg>mid3_sph_p</seg>
+	<param>scale</param>
+	<seg>mid4_sph_p</seg>
+	<param>scale</param>
+	<seg>ring2_sph_p</seg>
+	<param>scale</param>
+	<seg>ring3_sph_p</seg>
+	<param>scale</param>
+	<seg>ring4_sph_p</seg>
+	<param>scale</param>
+	<seg>pinky_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>pinky_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>pinky2_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>pinky2_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>pinky3_cyl_pos</seg>
+	<param>skew_baseRadius</param>
+	<seg>pinky3_cyl_pos</seg>
+	<param>skew_topRadius</param>
+	<seg>thumb2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>thumb2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>thumb3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>thumb3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>ring2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>ring2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>ring3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>index2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>index2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>index3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>mid2_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>mid2_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid3_cyl_p</seg>
+	<param>skew_baseRadius</param>
+	<seg>mid3_cyl_p</seg>
+	<param>skew_topRadius</param>
+	<seg>palm_mesh_pos</seg>
+	<param>scale_X</param>
+	<seg>palm_sph1_p</seg>
+	<param>scaleZ</param>
+	<seg>palm_sph2_p</seg>
+	<param>scaleZ</param>
+</metaVar>
+<nbMarkers>0</nbMarkers>
+</boost_serialization>
+

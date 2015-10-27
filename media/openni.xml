@@ -1,0 +1,71 @@
+<OpenNI>
+	<Licenses>
+		<!-- Add licenses here 
+		<License vendor="vendor" key="key"/>
+		-->
+	</Licenses>
+	<Log writeToConsole="false" writeToFile="false">
+		<!-- 0 - Verbose, 1 - Info, 2 - Warning, 3 - Error (default) -->
+		<LogLevel value="0"/>
+		<Masks>
+			<Mask name="ALL" on="false"/>
+		</Masks>
+		<Dumps>
+		</Dumps>
+	</Log>
+	<ProductionNodes>	
+		<!-- Normal Image -->
+		
+		<Node type="Image" name="Image1">
+			<Configuration>
+                <MapOutputMode xRes="640" yRes="480" FPS="30"/> 
+                <!--<MapOutputMode xRes="320" yRes="240" FPS="30"/> -->
+                <!--<MapOutputMode xRes="320" yRes="240" FPS="60"/> -->
+				<!--				<MapOutputMode xRes="1280" yRes="1024" FPS="15"/> -->
+				<Mirror on="false"/>
+			</Configuration>
+		</Node>	
+	
+		<!-- HighRes Image -->
+		<!--
+		<Node type="Image" name="Image1">
+			<Configuration>
+				<MapOutputMode xRes="1280" yRes="1024" FPS="15"/>
+				<Mirror on="true"/>
+			</Configuration>
+		</Node>
+		-->
+		
+		<!-- Normal IR -->
+		<!--
+		<Node type="IR" name="IR1">
+			<Configuration>
+				<MapOutputMode xRes="640" yRes="480" FPS="30"/>
+				<Mirror on="false"/>
+			</Configuration>
+		</Node>
+		-->
+		<!-- HighRes IR -->
+		<!--
+		<Node type="IR" name="IR1">
+			<Configuration>
+				<MapOutputMode xRes="1280" yRes="1024" FPS="15"/>
+				<Mirror on="true"/>
+			</Configuration>
+		</Node>		
+		-->
+		
+		<Node type="Depth" name="Depth1">
+			<Configuration>
+                <MapOutputMode xRes="640" yRes="480" FPS="30"/>
+                <!--<MapOutputMode xRes="320" yRes="240" FPS="30"/>-->
+                <!--<MapOutputMode xRes="320" yRes="240" FPS="60"/>-->
+				<Mirror on="false"/>
+			</Configuration>
+		</Node>
+		<!--
+		<Node type="Audio" name="Audio1">
+		</Node>
+		-->
+	</ProductionNodes>
+</OpenNI>
