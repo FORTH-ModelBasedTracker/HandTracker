@@ -1,9 +1,11 @@
 # HandTracker
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 Python scripts implementing the hand tracker pipeline released on github.
 
 ## Description
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 This script uses the Model Based Vision (MBV) libraries created by the Computer Vision and Robotics Lab at ICS/FORTH. The libraries are free for academic and non-profit use under this [licence](licence.txt).
 
@@ -29,9 +31,6 @@ System requirements:
 
 ## Dependencies
 
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
-
 Additionally the python libs use python2.7 and numpy.
 
 *Linux* users just install them using apt:
@@ -52,11 +51,10 @@ In order to use the example script you need to install OpenNI1.x to your system.
 
 ## Usage
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=t1ZHzJiRJw4" target="_blank" align="right"><img src="http://img.youtube.com/vi/t1ZHzJiRJw4/0.jpg" alt="Hand Tracker Usage." width="240" height="180" border="10" align="right" /></a> 
 To run the hand tracker script you need to download for [Ubuntu 14.04 64](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip) or [Windows10 64](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip) the MBV and HandTracker libraries for your system. 
 
 Unzip the package and set an environment variable named *MBV_LIBS* to point to the location of the libraries. The runme scripts use the *MBV_LIBS* variable to setup the library paths and python paths correctly before running the script.
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=t1ZHzJiRJw4" target="_blank" align="right"><img src="http://img.youtube.com/vi/t1ZHzJiRJw4/0.jpg" alt="Hand Tracker Usage." width="240" height="180" border="10" align="right" /></a> 
 
 You are done. Run the `runme.sh` or `runme.bat` script to test the hand tracker. 
 
