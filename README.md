@@ -8,7 +8,7 @@ This script uses the Model Based Vision (MBV) libraries created by the Computer 
 
 It implements a hand tracker pipeline described first in [Oikonomidis et al: Efficient model-based 3D tracking of hand articulations using Kinect](http://users.ics.forth.gr/~argyros/mypapers/2011_09_bmvc_kinect_hand_tracking.pdf).
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Hand Tracking" width="240" height="180" border="10" /></a> 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 The software tracks the 3D position, orientation and full articulation of a human hand from markerless visual observations. The developed method:
 
@@ -30,6 +30,7 @@ System requirements:
 ## Dependencies
 
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 Additionally the python libs use python2.7 and numpy.
 
