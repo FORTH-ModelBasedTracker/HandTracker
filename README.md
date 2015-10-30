@@ -8,6 +8,8 @@ This script uses the Model Based Vision (MBV) libraries created by the Computer 
 
 It implements a hand tracker pipeline described first in [Oikonomidis et al: Efficient model-based 3D tracking of hand articulations using Kinect](http://users.ics.forth.gr/~argyros/mypapers/2011_09_bmvc_kinect_hand_tracking.pdf).
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Hand Tracking" width="240" height="180" border="10" /></a> 
+
 The software tracks the 3D position, orientation and full articulation of a human hand from markerless visual observations. The developed method:
 
  * estimates the full articulation of a hand (26 DoFs)  involved in unconstrained motion
@@ -27,17 +29,23 @@ System requirements:
 
 ## Dependencies
 
-The MBV libraries depend on [OpenCV 2.4](http://opencv.org/) and [tbb 4.2](https://www.threadingbuildingblocks.org/).
+
 
 Additionally the python libs use python2.7 and numpy.
 
-Linux users just install them using apt:
+*Linux* users just install them using apt:
 
 ```
 sudo apt-get install libopencv-dev libtbb2 python-numpy
 ```
 
-Windows users must first download and install the correct versions from the links above. For the python packages it is suggested to use [anaconda] (https://www.continuum.io/downloads) which comes with many extra packages including numpy.
+If you plan to use openni1.x (required for running some of the example scripts):
+
+```
+sudo apt-get install libopenni0 libopenni-sensor-primesense0 
+```
+
+*Windows* users must first download and install the correct library versions from the links above. For the python packages it is suggested to use [anaconda] (https://www.continuum.io/downloads) which comes with many extra packages including numpy.
 
 In order to use the example script you need to install OpenNI1.x to your system. You will also need a Xtion or Kinect RGBD sensor to use it in real time. You can download the OpenNI1.x binaries and Xtion drivers from [here](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x).
 
@@ -45,7 +53,7 @@ In order to use the example script you need to install OpenNI1.x to your system.
 
 To run the hand tracker script you need to download for [Ubuntu 14.04 64](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip) or [Windows10 64](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip) the MBV and HandTracker libraries for your system. 
 
-Unzip the package and set an environment variable named *MBV_SDK* to point to the location of the libraries. The runme scripts use the *MBV_SDK* variable to setup the library paths and python paths correctly before running the script.
+Unzip the package and set an environment variable named *MBV_LIBS* to point to the location of the libraries. The runme scripts use the *MBV_LIBS* variable to setup the library paths and python paths correctly before running the script.
 
 You are done. Run the `runme.sh` or `runme.bat` script to test the hand tracker. 
 
@@ -55,5 +63,4 @@ Happy Tracking! :)
 ## Contact
 
 For questions, comments and any kind of feedback please use the github issues, and the wiki. 
-
 
