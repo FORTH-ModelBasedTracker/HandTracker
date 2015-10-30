@@ -1,5 +1,6 @@
 # HandTracker
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 Python scripts implementing the hand tracker pipeline released on github.
 
 ## Description
@@ -8,7 +9,6 @@ This script uses the Model Based Vision (MBV) libraries created by the Computer 
 
 It implements a hand tracker pipeline described first in [Oikonomidis et al: Efficient model-based 3D tracking of hand articulations using Kinect](http://users.ics.forth.gr/~argyros/mypapers/2011_09_bmvc_kinect_hand_tracking.pdf).
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 The software tracks the 3D position, orientation and full articulation of a human hand from markerless visual observations. The developed method:
 
@@ -30,7 +30,7 @@ System requirements:
 ## Dependencies
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 Additionally the python libs use python2.7 and numpy.
 
@@ -56,7 +56,12 @@ To run the hand tracker script you need to download for [Ubuntu 14.04 64](http:/
 
 Unzip the package and set an environment variable named *MBV_LIBS* to point to the location of the libraries. The runme scripts use the *MBV_LIBS* variable to setup the library paths and python paths correctly before running the script.
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=t1ZHzJiRJw4" target="_blank" align="right"><img src="http://img.youtube.com/vi/t1ZHzJiRJw4/0.jpg" alt="Hand Tracker Usage." width="240" height="180" border="10" align="right" /></a> 
+
 You are done. Run the `runme.sh` or `runme.bat` script to test the hand tracker. 
+
+If you do not have a Xtion or Kinect camera you can alter the python script to work with your own Depth input (along with your camera's intrinsic parameters). 
+Alternatively you can download our [sample sequences](http://cvrlcode.ics.forth.gr/web_share/PFHandTracker/oni_sequences.zip).  
 
 Happy Tracking! :) 
 
