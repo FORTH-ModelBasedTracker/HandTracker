@@ -12,11 +12,11 @@ It implements a hand tracker pipeline described first in [Oikonomidis et al: Eff
 
 
 The software tracks the 3D position, orientation and full articulation of a human hand from markerless visual observations. The developed method:
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
  * estimates the full articulation of a hand (26 DoFs)  involved in unconstrained motion
  * operates on input acquired by easy-to-install and widely used/supported RGB-D cameras (e.g. Kinect, Xtion)
  * does not require markers, special gloves
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
  * performs at a rate of 20fps in modern architectures (GPU acceleration)
  * does not require calibration
  * does not rely on any proprietary built-in tracking technologies (Nite, OpenNI, Kinect SDK)
