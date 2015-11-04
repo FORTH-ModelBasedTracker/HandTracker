@@ -83,13 +83,17 @@ if __name__ == '__main__':
     print "Starting Grabber..."
     
     # Initialize RGBD acquisition. We will be acquiring images
-    # from a PrimeSense-based sensor, through OpenNI.
-    acq = Acquisition.OpenNIGrabber(True, True, 'media/openni.xml')
+    # from a saved sequence, in oni format.
+    
+    # User should define a path to a saved sequence in oni format.
+    # Set path to empty string to perform live capture from an existing sensor.
+    oniPath = 'loop.oni'
+    acq = Acquisition.OpenNIGrabber(True, True, 'media/openni.xml', oniPath, True)
     acq.initialize()
     
     # Initialization for the hand pose of the first frame is specified.
     # If track is lost, resetting will revert track to this pose.
-    defaultInitPos = Core.ParamVector([ 0, 0, 900, 0, 0, 1, 0, 1.20946707135219810e-001, 1.57187812868051640e+000, 9.58033504364020840e-003, -1.78593063562731860e-001, 7.89636216585289100e-002, 2.67967456875403400e+000, 1.88385552327860720e-001, 2.20049375319072360e-002, -4.09740579183203310e-002, 1.52145111735213370e+000, 1.48366400350912500e-001, 2.85607073734409630e-002, -4.53781680931323280e-003, 1.52743247624671910e+000, 1.01751907812505270e-001, 1.08706683246161150e-001, 8.10845240231484330e-003, 1.49009228214971090e+000, 4.64716068193632560e-002, -1.44370358851376110e-001])
+    defaultInitPos = Core.ParamVector([ 0, 80, 900, 0, 0, 1, 0, 1.20946707135219810e-001, 1.57187812868051640e+000, 9.58033504364020840e-003, -1.78593063562731860e-001, 7.89636216585289100e-002, 2.67967456875403400e+000, 1.88385552327860720e-001, 2.20049375319072360e-002, -4.09740579183203310e-002, 1.52145111735213370e+000, 1.48366400350912500e-001, 2.85607073734409630e-002, -4.53781680931323280e-003, 1.52743247624671910e+000, 1.01751907812505270e-001, 1.08706683246161150e-001, 8.10845240231484330e-003, 1.49009228214971090e+000, 4.64716068193632560e-002, -1.44370358851376110e-001])
     
     # The 3D hand pose, as is tracked in the tracking loop.
     currentHandPose = defaultInitPos
@@ -99,7 +103,7 @@ if __name__ == '__main__':
     delay = {True:0,False:1}
     frame = 0
     count=0
-    tracking = False
+    tracking = len(oniPath) > 0
     actualFPS = 0.0
     
     print "Entering main Loop."
