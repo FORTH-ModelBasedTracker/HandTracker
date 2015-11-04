@@ -26,6 +26,9 @@ import time
 if __name__ == '__main__':
     print "Creating Renderer..."
     
+    # Turn off logging
+    Core.InitLog(['handTracker', 'log.severity', 'error'])
+    
     # The 3D renderer is a singleton. The single instance is accessed.
     renderer = Rendering.RendererOGLCudaExposed.get()
     # OpenCV coordinate system is right handed but the renderer's
