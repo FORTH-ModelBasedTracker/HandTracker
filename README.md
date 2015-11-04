@@ -1,10 +1,7 @@
-# HandTracker
+# CVRL FORTH HandTracker
 
-Python scripts implementing the hand tracker pipeline released on github.
 
 ## Description
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank" align="right"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="240" height="180" border="10" align="right" /></a> 
 
 This script uses the Model Based Vision (MBV) libraries created by the Computer Vision and Robotics Lab at ICS/FORTH. The libraries are free for academic and non-profit use under this [licence](licence.txt).
 
@@ -13,13 +10,15 @@ It implements a hand tracker pipeline described first in [Oikonomidis et al: Eff
 
 The software tracks the 3D position, orientation and full articulation of a human hand from markerless visual observations. The developed method:
 
- * estimates the full articulation of a hand (26 DoFs)  involved in unconstrained motion
+ * estimates the full articulation of a hand (26 DoFs redundantly encoded in 27 parameters)  involved in unconstrained motion
  * operates on input acquired by easy-to-install and widely used/supported RGB-D cameras (e.g. Kinect, Xtion)
  * does not require markers, special gloves
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=e3G9soCdIbc" target="_blank" align="right"><img src="http://img.youtube.com/vi/e3G9soCdIbc/0.jpg" alt="Two hand tracking" width="240" height="180" border="10" align="right" /></a> 
- * performs at a rate of 20fps in modern architectures (GPU acceleration)
+ * performs at a rate of 30fps in modern architectures (GPU acceleration)
  * does not require calibration
  * does not rely on any proprietary built-in tracking technologies (Nite, OpenNI, Kinect SDK)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="320" height="240" border="10"/></a>
+
 
 ## Hardware Requirements
 
@@ -35,16 +34,21 @@ System requirements:
 		- 64bit Windows 8 or newer
 		- 64bit Ubuntu 14.04 Linux
 	- Drivers
-		- Latest CUDA driver
-		- OpenNI driver (only if OpenNI acquisition will be used)
-		- Kinect 2 driver (Windows 8 or newer, only if Kinect2 acquisition will be used)
+		- [Latest CUDA driver](https://developer.nvidia.com/cuda-downloads)
+		- OpenNI driver
+		- Kinect 2 driver
 
 ## Download links
 <a name="download"></a>
 
-- 3D Hand tracking
-	- [Ubuntu 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
-	- [Windows 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
+- [Ubuntu 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
+- [Windows 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
+
+### Windows Drivers and/or SDKs
+
+- [OpenNI 1.x SDK for Windows 8 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/OpenNI-Win64-1.5.7.10-Dev.zip) (install prior to sensor driver)
+- [OpenNI 1.x sensor driver for 8 Windows 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/Sensor_Driver/Sensor-Win64-5.1.6.6-Redist.zip)
+- [Kinect 2 SDK for Windows 8 64bit and newer](http://www.microsoft.com/en-us/download/details.aspx?id=44561)
 
 ## Installation and usage
 
@@ -85,11 +89,11 @@ OpenCV is statically built with the provided binaries. Thread building blocks ca
 conda install numpy
 ```
 
-
+Also, download and install SDK and drivers from [the download section](#download).
 
 ### Usage
 
-Make sure the current working directory is the root of HandTracker. Also make sure to have a working installation of OpenNI 1.x (SDK and drivers).
+Make sure the current working directory is the root of HandTracker and that <tt>MBV_LIBS</tt> is set. Also make sure to have a working installation of OpenNI 1.x (SDK and drivers).
 
 Run the `runme.sh` (Ubuntu) or `runme.bat` (Windows) script to test the hand tracker. Press `s` to stop/start 3D hand tracking.
 
