@@ -41,8 +41,8 @@ System requirements:
 ## Download links
 <a name="download"></a>
 
-- [Ubuntu 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
-- [Windows 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.0/MBV_PythonAPI_1.0.zip)
+- [Ubuntu 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.1/MBV_PythonAPI_Linux_1.1.zip)
+- [Windows 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.1/MBV_PythonAPI_Win_1.1.zip)
 
 ### Windows Drivers and/or SDKs
 
