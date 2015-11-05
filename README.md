@@ -72,9 +72,7 @@ set MBV_LIBS=c:\Users\User\Documents\FORTH\HANDTRACKER
 
 The provided package has some external dependencies, listed below. One such dependency is a working Python 2.7 environment.
 
-<span style="color:#FFFFFF;background-color:#FF0000">
-**Make sure the Python version is 2.7 64bit.**
-</span>
+<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Make sure the Python version is 2.7 64bit.
 
 ### Ubuntu
 
@@ -104,7 +102,7 @@ Make sure the current working directory is the root of HandTracker and that <tt>
 
 Run the `runme.sh` (Ubuntu) or `runme.bat` (Windows) script to test the hand tracker. Press `s` to stop/start 3D hand tracking.
 
-*Notice*: Be aware that the first execution will take a significant amount of time, CPU and memory. This is due to the intermediate CUDA code being compiled. This will only happen once, as the compilation result is cached. In Ubuntu the cache limit might be too restricting and in these cases caching will fail, leading to recompilation at every execution. To remedy this the size can be increased as follows (command line):
+<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Be aware that the first execution will take a significant amount of time, CPU and memory. This is due to the intermediate CUDA code being compiled. This will only happen once, as the compilation result is cached. In Ubuntu the cache limit might be too restricting and in these cases caching will fail, leading to recompilation at every execution. To remedy this the size can be increased as follows (command line):
 
 ```
 export CUDA_CACHE_MAXSIZE=2147483648
