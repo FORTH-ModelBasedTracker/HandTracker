@@ -48,10 +48,10 @@ System requirements:
 
 ### Windows Dependencies
 
-- [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-- [OpenNI 1.x SDK for Windows 8 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/OpenNI-Win64-1.5.7.10-Dev.zip) (install prior to sensor driver)
-- [OpenNI 1.x sensor driver for 8 Windows 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/Sensor_Driver/Sensor-Win64-5.1.6.6-Redist.zip)
-- [Kinect 2 SDK for Windows 8 64bit and newer](http://www.microsoft.com/en-us/download/details.aspx?id=44561)
+- [Visual C++ **64bit** Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+- [OpenNI 1.x SDK for Windows 8 **64bit** and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/OpenNI-Win64-1.5.7.10-Dev.zip) (install prior to sensor driver)
+- [OpenNI 1.x sensor driver for 8 Windows **64bit** and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/Sensor_Driver/Sensor-Win64-5.1.6.6-Redist.zip)
+- [Kinect 2 SDK for Windows 8 **64bit** and newer](http://www.microsoft.com/en-us/download/details.aspx?id=44561)
 
 ## Installation and usage
 
