@@ -74,6 +74,8 @@ The provided package has some external dependencies, listed below. One such depe
 
 <span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Make sure the Python version is 2.7 64bit.
 
+<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Binaries were build against CUDA 7.5. This might require the user to update the GPU driver to the latest version. In the lack of a supported driver, an error message of the form "*CUDA driver version is insufficient for CUDA runtime version*" is issued.
+
 ### Ubuntu
 
 Install opencv, thread building blocks (TBB) python and numpy by executing the following in the command line:
@@ -94,6 +96,12 @@ OpenCV is statically built with the provided binaries. Thread building blocks is
 
 ```
 conda install numpy
+```
+
+<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Binaries were built against numpy 1.10.1. If a numpy related error (import or other) is issued, updating numpy to this version will be required. In Anaconda it would suffice to execute the following, from the command line:
+
+```
+conda update numpy
 ```
 
 ### Usage
