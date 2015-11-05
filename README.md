@@ -3,7 +3,7 @@
 
 ## Description
 
-This script uses the Model Based Vision (MBV) libraries created by the Computer Vision and Robotics Lab at ICS/FORTH. The libraries are free for academic and non-profit use under this [licence](licence.txt).
+This script uses the Model Based Vision (MBV) libraries created by the Computer Vision and Robotics Lab at ICS/FORTH. The libraries are free for academic and non-profit use under this [licence](license.txt).
 
 It implements a hand tracker pipeline described first in [Oikonomidis et al: Efficient model-based 3D tracking of hand articulations using Kinect](http://users.ics.forth.gr/~argyros/mypapers/2011_09_bmvc_kinect_hand_tracking.pdf).
 
@@ -25,7 +25,7 @@ The software tracks the 3D position, orientation and full articulation of a huma
 System requirements:
 
 - Hardware
-	- Multi-core CPU *(Intel? AMD?)*
+	- Multi-core Intel CPU
 	- 1 GB of RAM or more
 	- CUDA-enabled GPU (compute capability > 1.0)
 		- 512MB GPU RAM or more
@@ -44,8 +44,9 @@ System requirements:
 - [Ubuntu 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.1/MBV_PythonAPI_Linux_1.1.zip)
 - [Windows 3D hand tracking](http://cvrlcode.ics.forth.gr/files/mbv/v1.1/MBV_PythonAPI_Win_1.1.zip)
 
-### Windows Drivers and/or SDKs
+### Windows Dependencies
 
+- [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
 - [OpenNI 1.x SDK for Windows 8 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/OpenNI-Win64-1.5.7.10-Dev.zip) (install prior to sensor driver)
 - [OpenNI 1.x sensor driver for 8 Windows 64bit and newer](http://cvrlcode.ics.forth.gr/web_share/OpenNI/OpenNI_SDK/OpenNI_1.x/Sensor_Driver/Sensor-Win64-5.1.6.6-Redist.zip)
 - [Kinect 2 SDK for Windows 8 64bit and newer](http://www.microsoft.com/en-us/download/details.aspx?id=44561)
@@ -83,17 +84,15 @@ sudo apt-get install libopenni0 libopenni-sensor-primesense0
 
 ### Windows
 
-OpenCV is statically built with the provided binaries. Thread building blocks can be found in the 3rd party library binaries of [the download section](#download). The same holds for the required OpenNI and Kinect 2 SDKs. For python support it is suggested to use [anaconda] (https://www.continuum.io/downloads). After installing Anaconda, the installation of numpy is a simple as executing the following in the command line:
+OpenCV is statically built with the provided binaries. Thread building blocks is bundled with the downloadable package. The rest of the dependencies should be downloaded from the download section. For python support it is suggested to use [anaconda] (https://www.continuum.io/downloads). After installing Anaconda, the installation of numpy is a simple as executing the following in the command line:
 
 ```
 conda install numpy
 ```
 
-Also, download and install SDK and drivers from [the download section](#download).
-
 ### Usage
 
-Make sure the current working directory is the root of HandTracker and that <tt>MBV_LIBS</tt> is set. Also make sure to have a working installation of OpenNI 1.x (SDK and drivers).
+Make sure the current working directory is the root of HandTracker and that <tt>MBV_LIBS</tt> is set.
 
 Run the `runme.sh` (Ubuntu) or `runme.bat` (Windows) script to test the hand tracker. Press `s` to stop/start 3D hand tracking.
 
