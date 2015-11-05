@@ -33,6 +33,8 @@ System requirements:
 	- OS
 		- 64bit Windows 8 or newer
 		- 64bit Ubuntu 14.04 Linux
+	- Environment
+		- **Python 2.7 64bit**
 	- Drivers
 		- [Latest CUDA driver](https://developer.nvidia.com/cuda-downloads)
 		- OpenNI driver
@@ -67,6 +69,12 @@ Windows:
 ```
 set MBV_LIBS=c:\Users\User\Documents\FORTH\HANDTRACKER
 ```
+
+The provided package has some external dependencies, listed below. One such dependency is a working Python 2.7 environment.
+
+<span style="color:#FFFFFF;background-color:#FF0000">
+**Make sure the Python version is 2.7 64bit.**
+</span>
 
 ### Ubuntu
 
