@@ -90,6 +90,9 @@ If you plan to use openni1.x (required for running some of the example scripts),
 sudo apt-get install libopenni0 libopenni-sensor-primesense0 
 ```
 
+Make sure that you have nvidia driver 352 or newer installed. Use the
+"Additional Drivers" tool to select the correct driver version.
+
 ### Windows
 
 OpenCV is statically built with the provided binaries. Thread building blocks is bundled with the downloadable package. The rest of the dependencies should be downloaded from the download section. For python support it is suggested to use [anaconda] (https://www.continuum.io/downloads). After installing Anaconda, the installation of numpy is a simple as executing the following in the command line:
