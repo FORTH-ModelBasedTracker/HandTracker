@@ -27,8 +27,10 @@ System requirements:
 - Hardware
 	- Multi-core Intel CPU
 	- 1 GB of RAM or more
-	- CUDA-enabled GPU (compute capability > 1.0)
+	- CUDA-enabled GPU
 		- 512MB GPU RAM or more
+		- CUDA compute capability > 1.0
+		- OpenGL 3.3
 - Software
 	- OS
 		- 64bit Windows 8 or newer
