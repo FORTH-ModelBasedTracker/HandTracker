@@ -81,7 +81,7 @@ The provided package has some external dependencies, listed below. One such depe
 Install opencv, thread building blocks (TBB) python and numpy by executing the following in the command line:
 
 ```
-sudo apt-get install libopencv-dev libtbb2 python-numpy
+sudo apt-get install libopencv-dev libtbb2 python-numpy python-opencv
 ```
 
 If you plan to use openni1.x (required for running some of the example scripts), also execute:
