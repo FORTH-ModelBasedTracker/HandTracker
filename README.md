@@ -19,6 +19,24 @@ The software tracks the 3D position, orientation and full articulation of a huma
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Fxa43qcm1C4" target="_blank"><img src="http://img.youtube.com/vi/Fxa43qcm1C4/0.jpg" alt="Single hand tracking" width="320" height="240" border="10"/></a>
 
+## Citation
+
+If you use any part of this work please cite the following:
+
+Oikonomidis, Iason, Nikolaos Kyriazis, and Antonis A. Argyros. "Efficient model-based 3D tracking of hand articulations using Kinect." BMVC. Vol. 1. No. 2. 2011.
+```
+@inproceedings{oikonomidis2011efficient,
+  title={Efficient model-based 3D tracking of hand articulations using Kinect.},
+  author={Oikonomidis, Iason and Kyriazis, Nikolaos and Argyros, Antonis A},
+  booktitle={BMVC},
+  volume={1},
+  number={2},
+  pages={3},
+  year={2011}
+}
+```
+
+**Notice**: The citation targets are subject to change. Please make sure to use the latest information provided.
 
 ## Hardware Requirements
 
@@ -74,9 +92,9 @@ set MBV_LIBS=c:\Users\User\Documents\FORTH\HANDTRACKER
 
 The provided package has some external dependencies, listed below. One such dependency is a working Python 2.7 environment.
 
-<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Make sure the Python version is 2.7 64bit.
+**Notice:** Make sure the Python version is 2.7 64bit.
 
-<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Binaries were build against CUDA 7.5. This might require the user to update the GPU driver to the latest version. In the lack of a supported driver, an error message of the form "*CUDA driver version is insufficient for CUDA runtime version*" is issued.
+**Notice:** Binaries were build against CUDA 7.5. This might require the user to update the GPU driver to the latest version. In the lack of a supported driver, an error message of the form "*CUDA driver version is insufficient for CUDA runtime version*" is issued.
 
 ### Ubuntu
 
@@ -103,7 +121,7 @@ OpenCV is statically built with the provided binaries. Thread building blocks is
 conda install numpy
 ```
 
-<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Binaries were built against numpy 1.10.1. If a numpy related error (import or other) is issued, updating numpy to this version will be required. In Anaconda it would suffice to execute the following, from the command line:
+**Notice:** Binaries were built against numpy 1.10.1. If a numpy related error (import or other) is issued, updating numpy to this version will be required. In Anaconda it would suffice to execute the following, from the command line:
 
 ```
 conda update numpy
@@ -115,7 +133,7 @@ Make sure the current working directory is the root of HandTracker and that <tt>
 
 Run the `runme.sh` (Ubuntu) or `runme.bat` (Windows) script to test the hand tracker. Press `s` to stop/start 3D hand tracking.
 
-<span style="color:#FFFFFF;background-color:#FF0000">**Notice:**</span> Be aware that the first execution will take a significant amount of time, CPU and memory. This is due to the intermediate CUDA code being compiled. This will only happen once, as the compilation result is cached. In Ubuntu the cache limit might be too restricting and in these cases caching will fail, leading to recompilation at every execution. To remedy this the size can be increased as follows (command line):
+**Notice:** Be aware that the first execution will take a significant amount of time, CPU and memory. This is due to the intermediate CUDA code being compiled. This will only happen once, as the compilation result is cached. In Ubuntu the cache limit might be too restricting and in these cases caching will fail, leading to recompilation at every execution. To remedy this the size can be increased as follows (command line):
 
 ```
 export CUDA_CACHE_MAXSIZE=2147483648
