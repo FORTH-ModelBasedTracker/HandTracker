@@ -83,14 +83,16 @@ if __name__ == '__main__':
     print "Starting Grabber..."
     
     # Initialize RGBD acquisition. We will be acquiring images
-    # from a saved sequence, in oni format.
-    
-    # User should define a path to a saved sequence in oni format.
-    # Set path to empty string to perform live capture from an existing sensor.
-    oniPath = 'loop.oni'
-    acq = Acquisition.OpenNIGrabber(True, True, 'media/openni.xml', oniPath, True)
-    acq.initialize()
-    
+    # from a Kinect2 sensor
+    Ch = Acquisition.Kinect2MSGrabber.Channels
+
+    FLAGS = { 'low' : Ch.Depth | Ch.RegisteredColor,
+              'high' : Ch.RegisteredDepth | Ch.Color }
+
+    # low or high
+    RESOLUTION = 'high'
+    acq = Acquisition.Kinect2MSGrabber(FLAGS[RESOLUTION])
+
     # Initialization for the hand pose of the first frame is specified.
     # If track is lost, resetting will revert track to this pose.
     defaultInitPos = Core.ParamVector([ 0, 80, 900, 0, 0, 1, 0, 1.20946707135219810e-001, 1.57187812868051640e+000, 9.58033504364020840e-003, -1.78593063562731860e-001, 7.89636216585289100e-002, 2.67967456875403400e+000, 1.88385552327860720e-001, 2.20049375319072360e-002, -4.09740579183203310e-002, 1.52145111735213370e+000, 1.48366400350912500e-001, 2.85607073734409630e-002, -4.53781680931323280e-003, 1.52743247624671910e+000, 1.01751907812505270e-001, 1.08706683246161150e-001, 8.10845240231484330e-003, 1.49009228214971090e+000, 4.64716068193632560e-002, -1.44370358851376110e-001])
@@ -103,33 +105,39 @@ if __name__ == '__main__':
     delay = {True:0,False:1}
     frame = 0
     count=0
-    tracking = len(oniPath) > 0
+    # Tracking is initialized to False. The user should put
+    # the right hand so as to match the template and press 'S'
+    # to start/reset tracking.
+    tracking = False
     actualFPS = 0.0
-    
+
     print "Entering main Loop."
     while True:
         loopStart = time.time()*1000;
         try:
             # Acquire images and image calibrations and break if unsuccessful.
-            # imgs is a list of numpy.andrray and clbs a list of Core.CameraMeta.
-            # The two lists are of equal size and elements correspond to one another.
-            # In OpenNIGrabber, the first image is the depth and the second is the RGB.
-            # In the media/openni.xml file it is specified that the depth will be aligned
-            # to the RGB image and that mirroring will be off. The resolution is VGA.
-            # It is not obligatory to use the OpenNIGrabber. As long as you can somehow provide
-            # aligned depth and RGB images and corresponding Core.CameraMeta, you can use 3D
-            # hand tracking.
             imgs, clbs = acq.grab()
-        except:
+
+            # Take care of the order of images
+            if RESOLUTION == 'high':
+                [rgb, depth], [clbRgb, clbDepth] = imgs, clbs
+            elif RESOLUTION == 'low':
+                [depth, rgb], [clbDepth, clbRgb] = imgs, clbs
+            else:
+                raise RuntimeError('Unsupported acquisition flags')
+
+            # RGB is actually RGBA. Omit alpha channel.
+            rgb = rgb[:,:,:3].copy()
+        except Exception as e:
+            print e
             break
-        
+
         # Get the depth calibration to extract some basic info.
-        c = clbs[0]
-        width,height = int(c.width),int(c.height)
+        width,height = int(clbDepth.width),int(clbDepth.height)
         
         # Step 1: configure 3D rendering to match depth calibration.
         # step1_setupVirtualCamera returns a view matrix and a projection matrix (graphics).
-        viewMatrix,projectionMatrix = ht.step1_setupVirtualCamera(c)
+        viewMatrix,projectionMatrix = ht.step1_setupVirtualCamera(clbDepth)
         
         # Step 2: compute the bounding box of the previously tracked hand pose.
         # For the sake of efficiency, search is performed in the vicinity of
@@ -151,7 +159,7 @@ if __name__ == '__main__':
         # The user might chose to bypass this call and do foreground detection
         # in some other way. What is required is a labels image which is non-zero
         # for foreground and a depth image which contains depth values in mm.
-        labels, depths = ht.step4_preprocessInput(imgs[1], imgs[0], bb)
+        labels, depths = ht.step4_preprocessInput(rgb, depth, bb)
  
         # Step5: Upload observations for GPU evaluation.
         # Hypothesis testing is performed on the GPU. Therefore, observations
@@ -174,7 +182,7 @@ if __name__ == '__main__':
 
         # Step 7 : Visualize.
         # This call superimposes a hand tracking solution on a RGB image
-        viz = ht.step7_visualize(imgs[1], viewMatrix,projectionMatrix, currentHandPose)
+        viz = ht.step7_visualize(rgb, viewMatrix,projectionMatrix, currentHandPose)
         cv.putText(viz, 'UI FPS = %f, Track FPS = %f' % (actualFPS , fps), (20, 20), 0, 0.5, (0, 0, 255))
         
         cv.imshow("Hand Tracker",viz)
