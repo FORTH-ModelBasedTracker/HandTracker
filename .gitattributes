@@ -1,0 +1,2 @@
+hand-object.oni filter=lfs diff=lfs merge=lfs -text
+loop.oni filter=lfs diff=lfs merge=lfs -text
